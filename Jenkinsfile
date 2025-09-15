@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker rm -f  vibrant-task-manager-ui'
-                    sh 'docker run -d --name vibrant-task-manager-ui -p 4499:80 ayushman2711/vibrant-task-manager-ui--docker-jenkins-k8s'
+                    sh 'docker run -d --name vibrant-task-manager-ui -p 4488:80 ayushman2711/vibrant-task-manager-ui--docker-jenkins-k8s'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
         stage('Post Deployment Testing') {
             steps {
                 script {
-                    sh 'curl -I http://localhost:4499'
+                    sh 'curl -I http://localhost:4488'
                 }
             }
         }
