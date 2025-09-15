@@ -1,3 +1,28 @@
+ How to run this project 
+
+ 
+steps 
+
+ docker build -t task-manage .
+ 
+
+docker run -d -p 4499:80 task-manage
+
+ 
+ 
+ 
+
+ 
+
+
+
+<img width="1848" height="944" alt="Screenshot from 2025-09-15 15-36-32" src="https://github.com/user-attachments/assets/938ce11f-e3ca-4fac-a6d4-6cd00b6cc5c2" />
+
+
+
+
+
+
 # Welcome to project
 
 ## Project info
