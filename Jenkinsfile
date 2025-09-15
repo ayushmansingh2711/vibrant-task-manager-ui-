@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', poll: false, url: 'https://github.com/ayushmansingh2711/schhool--docker-k8s'
+                git branch: 'main', poll: false, url: 'https://github.com/ayushmansingh2711/vibrant-task-manager-ui--docker-jenkins-k8s'
             }
         }
 
