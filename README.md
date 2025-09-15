@@ -1,7 +1,9 @@
  How to run this project 
 
  
-steps 
+steps   
+    Note -  This two step is for only docker 
+    
 
  docker build -t task-manage .
  
