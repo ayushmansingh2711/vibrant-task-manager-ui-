@@ -14,7 +14,10 @@ docker run -d -p 4488:80 task-manage
 
     Note  -
 
-     this project is live with jenkins   
+     this project is live with jenkins  
+
+     now working in k8s
+     
        
  
 
