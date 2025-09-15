@@ -11,10 +11,10 @@ pipeline {
         stage('Build and Push Images') {
             steps {
                 script {
-                    sh 'docker build -t ayushman2711/vibrant-task-manager-ui--docker-jenkins-k8s  .'
+                    sh 'docker build -t ayushman2711/vibrant-task-manager-ui-docker-jenkins-k8s  .'
                     withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'ay_pass', usernameVariable: 'ay_user')]) {
                         sh 'docker login -u $ay_user -p $ay_pass'
-                        sh 'docker push ayushman2711/vibrant-task-manager-ui--docker-jenkins-k8s '
+                        sh 'docker push ayushman2711/vibrant-task-manager-ui-docker-jenkins-k8s '
                     }
                 }
             }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker rm -f  vibrant-task-manager-ui'
-                    sh 'docker run -d --name vibrant-task-manager-ui -p 4488:80 ayushman2711/vibrant-task-manager-ui--docker-jenkins-k8s'
+                    sh 'docker run -d --name vibrant-task-manager-ui -p 4488:80 ayushman2711/vibrant-task-manager-ui-docker-jenkins-k8s'
                 }
             }
         }
